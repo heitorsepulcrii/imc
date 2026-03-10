@@ -1,3 +1,9 @@
+:root{
+    --primary-color:#010330;
+    --second-color:#C5D932;
+    --radius: 15px;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -5,134 +11,148 @@
 }
 
 body{
-    background:#252526;
+    background: linear-gradient(#000000, #010330);
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1{
     display: flex;
     justify-content: center;
-    color: #D9A404;
+    color: var(--second-color);
+    margin: 15px;
 }
 
 .desc{
     display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 720px;
-    padding: 5px;
-    margin-bottom: 20px;
-    background-color:  rgb(194, 191, 191);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.705);
+
+    width: 80%;
+    max-width: 500px;
+    padding: 15px ;
+
+    text-align: justify;
+    background-color:var(--second-color);
+    color:var(--primary-color);
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
-    display: grid;
-    width: 500px;
-    height: 300px;
-    margin: auto;
-    background-color: rgb(194, 191, 191);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#res, #dados{
-    text-align: center;
-    font-size: 1.5em;
+.dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 15px;
+    gap: 10px;
+    border-radius: var(--radius);
+
+    width: 80%;
+    max-width: 500px;
+
+    background-color:var(--second-color);
+}
+
+#peso{
+    width: 185px;
+    height: 25px;
+    background-color:var(--primary-color);
+    color: var(--second-color);
+}
+
+#altura{
+    height: 25px;
+    background-color:var(--primary-color);
+    color: var(--second-color);
+}
+
+.dados > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 5vh;
+    width: 47%;
+    margin: 20px 0px 20px 0px;
+
+    background-color:var(--primary-color);
+    color:var(--second-color);
+    font-size: x-large;
+}
+
+button:hover{
+    background-color: var(--second-color);
+    color:var(--primary-color);
 }
 
 #calcular{
-    margin-top: 10px;
-    width: 150px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+}
 
-    font-size: 1.0em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}   
- #inf{
-    display: grid;
+.res{
+    display: flex;
     justify-content: center;
- }
+    align-items: center;
 
-footer{
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.8em;
-    color: #D9A404;
-}
-
-  img{
-    width: 20px;
-    text-align: center;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    body{
-        background:#252526;
-
-    }
-
-    main{
-    display: grid;
-    width: 310px;
-    height:auto ;
-    margin: auto;
-    background-color: rgb(194, 191, 191);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
-}
-
-    .desc{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 350px;
-        padding: 5px;
-        margin-bottom: 20px;
-        background-color:  rgb(194, 191, 191);
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.705);
-
-} 
-}
-
-
-
-@media  screen and (max-width: 360px){  
-    body{
-        background:#252526;
-    }
+    width: 80%;
+    max-width: 500px;
+    height: 6vh;
     
-    h1{
+    background-color: var(--second-color);
+    border: 1px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.informações{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+
+    background-color: var(--second-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer{
     display: flex;
     justify-content: center;
-    color: #D9A404;
+    align-items: center;
+    flex-direction: row;
+    
     font-size: 1.4em;
-    margin-bottom: 10px;
+
+    gap: 10px;
+    margin-top: 15px;
+    
 }
 
-.desc{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 320px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color:  rgb(194, 191, 191);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.705);
+footer a{
+    color: var(--second-color);
+    text-decoration: none;
 }
 
-    main{
-    display: grid;
-    width: 300px;
-    height:auto ;
-    margin: auto;
-    background-color: rgb(194, 191, 191);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
-    font-size: 0.9em;
+img{
+    border-radius: 50%;
+    background-color: white;
+    width: 25px;
 }
-}
+

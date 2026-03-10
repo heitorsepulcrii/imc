@@ -1,8 +1,9 @@
-function calcular(){
-    let peso = Number(document.getElementById('txtp').value)
-    let altura = Number(document.getElementById('txta').value)/100
+function enviar(event){
+    event.preventDefault();
+    let peso = Number(document.getElementById('peso').value)
+    let altura = Number(document.getElementById('altura').value)/100
     let imc = peso / ( altura * altura)
 
-    document.getElementById('res').innerText = `O seu Índice de massa corpórea é de ${imc.toFixed(2)}`
-       
+    let resultado = document.getElementById('resultado')
+    resultado.innerText = `O seu Índice de massa corpórea é de ${imc.toFixed(2)}`      
 }

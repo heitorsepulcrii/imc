@@ -14,16 +14,21 @@
         </div>
     </header>
     <main>
-        <div id="dados">
-            <p>Peso(kg): <input type="number" name="txtp" id="txtp"></p>
-            <p>Altura(cm): <input type="number" name="txta" id="txta"></p>
-            <p></p>
-            <input type="button" value="Calcular" onclick="calcular()" id="calcular">
+        <form class="dados">
+            <div class="peso">
+                <label for="peso"><strong>Peso:</strong></label>
+                <input type="number" name="peso" id="peso">
+            </div>
+            <div class="altura">
+                <label for="altura"><strong>Altura:</strong></label>
+                <input type="number" name="altura" id="altura">
+            </div>
+            <button type="button" onclick="enviar(event)">Calcular</button>
         </div>
-        <div>
-            <p id="res"></p>
+        <div class="res">
+            <p id="resultado"></p>
         </div>
-            <div id="inf">
+            <div class="informações">
                 <p>Interpretação do resultado:</p>
                 <ul>
                     <li>Abaixo de 18,5: <strong>Baixo Peso</strong></li>
@@ -34,7 +39,7 @@
             </div>
     </main>
     <footer>
-        <p>@heitor008 <img src="imagens/github.png" alt="github"></p>
+        <a href="https://github.com/heitorsepulcrii">@heitorsepulcrii</a> <img src="imagens/github.png" alt="github"></p>
     </footer>
     <script src="imc.js"></script>
 </body>
